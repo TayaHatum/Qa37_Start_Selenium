@@ -10,10 +10,10 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.7.0'
+    implementation 'org.testng:testng:7.5'
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
