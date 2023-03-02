@@ -9,7 +9,15 @@ public class Start {
     @Test
     public void start(){
         wd=new ChromeDriver();
-        wd.get("https://www.google.com/");
+       // wd.get("https://www.google.com/"); without history
+        wd.navigate().to("https://www.google.com/"); // with history
+        wd.navigate().back();
+        wd.navigate().forward();
+        wd.navigate().refresh();
+
+
+        wd.close(); // only one tab if tab only  one & close browser
+        wd.quit(); // all tabs & close browser
 
     }
 }
