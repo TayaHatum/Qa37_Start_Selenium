@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,8 +13,10 @@ public class HomeWorks {
 
     @BeforeClass
     public void setUp(){
-       wd=new ChromeDriver();
-        //wd= new FirefoxDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        wd = new ChromeDriver(options);
+
         wd.get("https://telranedu.web.app/login");
     }
 
