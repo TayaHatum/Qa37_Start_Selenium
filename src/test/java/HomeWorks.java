@@ -18,8 +18,6 @@ public class HomeWorks {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-
-
         wd = new ChromeDriver(options);
         wd.get("https://telranedu.web.app/login");
     }
